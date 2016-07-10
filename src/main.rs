@@ -3,13 +3,13 @@ use rand::{thread_rng, Rng};
 use std::collections::HashMap;
 use std::fmt;
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone)]
 enum Cell {
     Card(usize),
     Empty,
 }
 
-#[derive(Eq, PartialEq, Hash, Debug)]
+#[derive(Eq, PartialEq, Hash)]
 enum Direction {
     Up,
     Down,
@@ -22,7 +22,6 @@ enum Action {
     Quit,
 }
 
-#[derive(Debug)]
 struct P15 {
     board: Vec<Cell>,
 }
