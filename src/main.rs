@@ -28,10 +28,7 @@ struct P15 {
 
 impl P15 {
     fn new() -> P15 {
-        let mut board = Vec::with_capacity(16);
-        for i in 1..16 {
-            board.push(Cell::Card(i));
-        }
+        let mut board = (1..16).map(Cell::Card).collect::<Vec<_>>();
         board.push(Cell::Empty);
 
         let mut rng = thread_rng();
